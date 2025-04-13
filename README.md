@@ -64,3 +64,11 @@ CREATE TABLE orders_p21 PARTITION OF orders
 CREATE TABLE orders_p22 PARTITION OF orders
 ```
     FOR VALUES IN (0);
+
+### After this, copy the insert commands from sql_output/orders 
+Connect to shard 1 and insert from order id 1 to 20 
+
+Connect to shard 2 and insert from order id 1 to 20 
+
+Verify Shard 1 as orders with ID's less than 10 and Shard 2 less than 20 
+and insertion is distributed across the partitions 

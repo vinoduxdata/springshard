@@ -1,4 +1,7 @@
 # springshard
+## API 
+http://localhost:8080/orders/12
+
 ## To practice Sharding and Partiotions
 ### Create two shards for the database store
 
